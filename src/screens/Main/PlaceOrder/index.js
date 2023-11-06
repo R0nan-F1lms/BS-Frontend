@@ -398,7 +398,7 @@ const PlaceOrder = ({navigation}) => {
                     </View>
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                       <CustomText label="Dietary:" fontFamily={fonts.medium} />
-                      <CustomText label={`   ${item.detary_flags}`} />
+                      <CustomText label={`   ${item.dietary_flags}`} />
                     </View>
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                       <CustomText label="Price:" fontFamily={fonts.medium} />
@@ -475,7 +475,7 @@ const PlaceOrder = ({navigation}) => {
                           label="Dietary:"
                           fontFamily={fonts.medium}
                         />
-                        <CustomText label={`   ${item.detary_flags}`} />
+                        <CustomText label={`   ${item.dietary_flags}`} />
                       </View>
                       <View
                         style={{flexDirection: 'row', alignItems: 'center'}}>

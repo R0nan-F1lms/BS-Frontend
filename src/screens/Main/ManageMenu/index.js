@@ -510,7 +510,7 @@ const ManageMenu = ({navigation}) => {
                         category: item.category,
                         availability: item.availability,
                       });
-                      setFile(`http://10.0.2.2/static/${item.file}`);
+                      setFile(`${api}/static/${item.file}`);
                     }}
                     onDelete={() => {
                       Alert.alert('Delete', 'Do you Delete This dish?', [
