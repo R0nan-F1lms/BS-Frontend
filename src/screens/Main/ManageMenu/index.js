@@ -57,7 +57,7 @@ const ManageMenu = ({navigation}) => {
     name: '',
     description: '',
     price: '',
-    detary_flags: '',
+    dietary_flag: '',
 
     availability: '',
   });
@@ -217,7 +217,7 @@ const ManageMenu = ({navigation}) => {
           name: '',
           description: '',
           price: '',
-          detary_flags: '',
+          dietary_flag: '',
           category: '',
           availability: '',
         });
@@ -243,7 +243,7 @@ const ManageMenu = ({navigation}) => {
   //     setError('Description *');
   //   } else if (dish.price?.length == 0) {
   //     setError('Price *');
-  //   } else if (dish.detary_flags?.length == 0) {
+  //   } else if (dish.dietary_flag?.length == 0) {
   //     setError('Detary Flags *');
   //   } else if (dish.category?.length == 0) {
   //     setError('Category *');
@@ -293,7 +293,7 @@ const ManageMenu = ({navigation}) => {
           name: '',
           description: '',
           price: '',
-          detary_flags: '',
+          dietary_flag: '',
           category: '',
           availability: '',
         });
@@ -491,12 +491,12 @@ const ManageMenu = ({navigation}) => {
               />
             ) : (
               dishData.map(item => {
-                console.log('img---', `${api}:5000/static/${item.file}`);
+                console.log('img---', `${api}/static/${item.file}`);
                 return (
                   <Card
                     key={item.id}
                     availability={item.availability ? item.availability : null}
-                    dietary_flags={item.detary_flags ? item.detary_flags : null}
+                    dietary_flags={item.dietary_flag ? item.dietary_flag : null}
                     name={item.name ? item.name : null}
                     price={item.price ? item.price : null}
                     icons
@@ -505,12 +505,12 @@ const ManageMenu = ({navigation}) => {
                       setDish({
                         name: item.name,
                         price: item.price,
-                        detary_flags: item.detary_flags,
+                        dietary_flag: item.dietary_flag,
                         description: item.description,
                         category: item.category,
                         availability: item.availability,
                       });
-                      setFile(`http://192.168.10.3:5000/static/${item.file}`);
+                      setFile(`http://10.0.2.2/static/${item.file}`);
                     }}
                     onDelete={() => {
                       Alert.alert('Delete', 'Do you Delete This dish?', [
@@ -531,7 +531,7 @@ const ManageMenu = ({navigation}) => {
                     }}
                     description={item.description ? item.description : null}
                     uri={
-                      item.file ? `${api}:5000/static/${item.file}` : 'hello'
+                      item.file ? `${api}/static/${item.file}` : 'hello'
                     }
                   />
                 );
@@ -577,10 +577,10 @@ const ManageMenu = ({navigation}) => {
               )}
             />
             <CustomInput
-              value={dish.detary_flags}
+              value={dish.dietary_flag}
               withLabel="Detary Flags"
               placeholder="Detary Flags"
-              onChangeText={e => setDish({...dish, detary_flags: e})}
+              onChangeText={e => setDish({...dish, dietary_flag: e})}
             />
             <CustomText
               label="Category"

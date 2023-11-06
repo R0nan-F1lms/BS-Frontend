@@ -368,7 +368,7 @@ const PlaceOrder = ({navigation}) => {
                   <Image
                     source={{
                       uri: item.file
-                        ? `${api}:5000/static/${item.file}`
+                        ? `${api}/static/${item.file}`
                         : 'hello',
                     }}
                     style={{
@@ -439,7 +439,7 @@ const PlaceOrder = ({navigation}) => {
                     <Image
                       source={{
                         uri: item.file
-                          ? `${api}:5000/static/${item.file}`
+                          ? `${api}/static/${item.file}`
                           : 'hello',
                       }}
                       style={{
